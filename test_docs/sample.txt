@@ -1,0 +1,13 @@
+Enterprise Knowledge Base: Operational Guidelines
+
+Section 1: General Policy
+All engineering teams must adhere to microservice isolation and zero unauthorized installations.
+Every pull request must pass the automated test suite before merging into the main branch.
+
+Section 2: Security Standards
+Secrets, API keys, and sensitive database connection strings must never be hardcoded into git repositories.
+All authentication tokens must be validated with HMAC SHA-256 or RSA signatures.
+
+Section 3: Incident Response
+In case of a service outage, the on-call engineer must immediately notify the Tech Lead and open an incident channel.
+Logs should be reviewed via centralized observability tools.

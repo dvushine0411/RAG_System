@@ -1,0 +1,17 @@
+{
+  "venvPath": "rag_engine",
+  "venv": ".venv",
+  "extraPaths": [
+    "rag_engine",
+    "rag_engine/api",
+    "rag_engine/.venv/Lib/site-packages"
+  ],
+  "typeCheckingMode": "basic",
+  "reportMissingImports": "warning",
+  "reportMissingModuleSource": false,
+  "exclude": [
+    "**/node_modules",
+    "rag_engine/.venv",
+    "**/__pycache__"
+  ]
+}

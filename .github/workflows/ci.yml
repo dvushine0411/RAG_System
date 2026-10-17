@@ -1,0 +1,112 @@
+# .github/workflows/ci.yml — Enterprise RAG System CI
+# Runs on every push / PR. Uses mock LLM / embedding / reranker providers only: no API keys or secrets needed.
+# NOTE: GitHub only runs workflows from the repository root — RAG_Project must be its own repository.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  api:
+    name: API Gateway (Node.js)
+    runs-on: ubuntu-latest
+    services:
+      mongodb:
+        image: mongo:7.0
+        ports: ["27017:27017"]
+        options: >-
+          --health-cmd "mongosh --quiet --eval 'db.adminCommand(\"ping\").ok'"
+          --health-interval 10s --health-timeout 5s --health-retries 5
+    defaults:
+      run:
+        working-directory: api
+    env:
+      MONGO_URI: mongodb://localhost:27017/rag_ci
+      TEST_MONGO_URI: mongodb://localhost:27017/rag_auth_test
+      JWT_ACCESS_SECRET: ci-access-secret-0123456789abcdefghijklmnop
+      JWT_REFRESH_SECRET: ci-refresh-secret-0123456789abcdefghijklmno
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: api/package-lock.json
+      - run: npm ci
+      - name: Type-check & build
+        run: npm run build
+      - name: Route & unit tests
+        run: |
+          node test_dedup.mjs
+          node test_retrieval_route.mjs
+          node test_augmentation_route.mjs
+          node test_query_stream_route.mjs
+          node test_query_route.mjs
+          node test_documents_route.mjs
+      - name: Auth integration test (real MongoDB service)
+        run: node test_auth.mjs
+
+  frontend:
+    name: Frontend (React + Vite)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+      - name: Type-check & production build
+        run: npm run build
+
+  rag_engine:
+    name: RAG Engine (Python, mock providers)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: rag_engine
+    env:
+      PYTHONPATH: .
+      OPENAI_API_KEY: ""
+      COHERE_API_KEY: ""
+      LLM_PROVIDER: mock
+      RERANKER_PROVIDER: mock
+      QDRANT_HOST: localhost  # tests use in-memory Qdrant; nothing listens here on purpose
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: rag_engine/requirements.txt
+      - run: pip install -r requirements.txt
+      - name: Test suite
+        run: |
+          set -e
+          for t in tests/test_*.py; do
+            echo "::group::$t"
+            python "$t"
+            echo "::endgroup::"
+          done
+
+  docker:
+    name: Docker images
+    runs-on: ubuntu-latest
+    needs: [api, frontend, rag_engine]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Provide .env for compose interpolation (placeholders only)
+        run: cp .env.example .env
+      - name: Build all images
+        run: docker compose build

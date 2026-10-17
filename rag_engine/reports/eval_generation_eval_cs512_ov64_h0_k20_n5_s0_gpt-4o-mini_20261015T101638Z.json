@@ -1,0 +1,190 @@
+{
+  "config": {
+    "chunk": {
+      "chunk_size": 512,
+      "chunk_overlap": 64,
+      "context_header": false
+    },
+    "retrieval": {
+      "top_k": 20,
+      "top_n": 5,
+      "min_score": 0.0
+    },
+    "model": "gpt-4o-mini",
+    "rewrite": false
+  },
+  "summary": {
+    "overall_score": 0.8988,
+    "answerable": {
+      "correctness": 1.0,
+      "groundedness": 1.0,
+      "answer_relevance": 1.0,
+      "context_relevance": 0.2286,
+      "refusal_correct": 1.0,
+      "score": 0.8843
+    },
+    "unanswerable": {
+      "refusal_correct": 1.0,
+      "groundedness": 1.0,
+      "score": 1.0
+    },
+    "by_type": {
+      "factual": 0.88,
+      "followup": 0.91,
+      "paraphrase": 0.88,
+      "unanswerable": 1.0
+    },
+    "latency_ms_avg": 1348.375,
+    "prompt_tokens_avg": 901.5
+  },
+  "results": [
+    {
+      "answer": "The Fastify API Gateway serves as the single entry point for all frontend and external service requests [1].",
+      "latency_ms": 935,
+      "prompt_tokens": 903,
+      "groundedness": 1.0,
+      "context_relevance": 0.2,
+      "answer_relevance": 1.0,
+      "correctness": 1.0,
+      "refused": false,
+      "refusal_correct": true,
+      "rationale": "The answer directly quotes the relevant passage and accurately reflects the information in the reference.",
+      "id": "q001",
+      "type": "factual",
+      "question": "What serves as the single entry point for all frontend and external service requests?",
+      "evidence_retrieved": true,
+      "score": 0.88
+    },
+    {
+      "answer": "The component that acts as the main access point for requests from the frontend and external services is the Fastify API Gateway, which serves as the single entry point for all such requests [1].",
+      "latency_ms": 1420,
+      "prompt_tokens": 905,
+      "groundedness": 1.0,
+      "context_relevance": 0.2,
+      "answer_relevance": 1.0,
+      "correctness": 1.0,
+      "refused": false,
+      "refusal_correct": true,
+      "rationale": "The answer accurately identifies the Fastify API Gateway as the main access point, directly supported by the context.",
+      "id": "q002",
+      "type": "paraphrase",
+      "question": "Which component acts as the main access point for requests from the frontend and external services?",
+      "evidence_retrieved": true,
+      "score": 0.88
+    },
+    {
+      "answer": "The chunk size used in the chunking strategy is 512 tokens [1].",
+      "latency_ms": 926,
+      "prompt_tokens": 855,
+      "groundedness": 1.0,
+      "context_relevance": 0.2,
+      "answer_relevance": 1.0,
+      "correctness": 1.0,
+      "refused": false,
+      "refusal_correct": true,
+      "rationale": "The answer directly states the chunk size and is fully supported by the relevant context.",
+      "id": "q003",
+      "type": "factual",
+      "question": "What is the chunk size used in the chunking strategy?",
+      "evidence_retrieved": true,
+      "score": 0.88
+    },
+    {
+      "answer": "Mỗi đoạn được tạo ra bởi phương pháp chia tách ký tự đệ quy bao gồm 512 token [1].",
+      "latency_ms": 1036,
+      "prompt_tokens": 932,
+      "groundedness": 1.0,
+      "context_relevance": 0.2,
+      "answer_relevance": 1.0,
+      "correctness": 1.0,
+      "refused": false,
+      "refusal_correct": true,
+      "rationale": "The answer directly and accurately reflects the information provided in the relevant context.",
+      "id": "q004",
+      "type": "paraphrase",
+      "question": "How many tokens are included in each segment created by the recursive character splitting?",
+      "evidence_retrieved": true,
+      "score": 0.88
+    },
+    {
+      "answer": "All engineering teams must adhere to microservice isolation and zero unauthorized installations. Additionally, every pull request must pass the automated test suite before merging into the main branch [1].",
+      "latency_ms": 1767,
+      "prompt_tokens": 868,
+      "groundedness": 1.0,
+      "context_relevance": 0.2,
+      "answer_relevance": 1.0,
+      "correctness": 1.0,
+      "refused": false,
+      "refusal_correct": true,
+      "rationale": "The answer directly and completely addresses the question with supported claims from the context.",
+      "id": "q005",
+      "type": "factual",
+      "question": "What must all engineering teams adhere to?",
+      "evidence_retrieved": true,
+      "score": 0.88
+    },
+    {
+      "answer": "Every pull request must pass the automated test suite before merging into the main branch [1].",
+      "latency_ms": 908,
+      "prompt_tokens": 912,
+      "groundedness": 1.0,
+      "context_relevance": 0.2,
+      "answer_relevance": 1.0,
+      "correctness": 1.0,
+      "refused": false,
+      "refusal_correct": true,
+      "rationale": "The answer directly and accurately reflects the requirement stated in the context.",
+      "id": "q006",
+      "type": "paraphrase",
+      "question": "What is required for a pull request before it can be merged?",
+      "evidence_retrieved": true,
+      "score": 0.88
+    },
+    {
+      "answer": "Before forwarding files to the ML service, the Fastify API Gateway generates a SHA-256 fingerprint of the binary stream and queries MongoDB to detect existing documents [1].",
+      "latency_ms": 2521,
+      "prompt_tokens": 932,
+      "groundedness": 1.0,
+      "context_relevance": 0.4,
+      "answer_relevance": 1.0,
+      "correctness": 1.0,
+      "refused": false,
+      "refusal_correct": true,
+      "rationale": "The answer accurately summarizes the actions taken by the Fastify API Gateway before forwarding files to the ML service, supported by the context.",
+      "id": "q007",
+      "type": "followup",
+      "question": "And what does it do before forwarding files to the ML service?",
+      "evidence_retrieved": true,
+      "score": 0.91
+    },
+    {
+      "answer": "Dựa trên tài liệu được cung cấp, tôi không tìm thấy thông tin để trả lời câu hỏi này.",
+      "latency_ms": 1274,
+      "prompt_tokens": 905,
+      "groundedness": 1.0,
+      "context_relevance": 0.0,
+      "answer_relevance": 1.0,
+      "correctness": null,
+      "refused": true,
+      "refusal_correct": true,
+      "rationale": "The answer appropriately refuses to provide information not present in the context.",
+      "id": "q008",
+      "type": "unanswerable",
+      "question": "What is the exact number of tokens required for optimal performance in the ingestion pipeline?",
+      "evidence_retrieved": null,
+      "score": 1.0
+    }
+  ],
+  "cost": {
+    "estimated_usd": 0.0024,
+    "budget_usd": 0.2,
+    "cohere_rerank_calls": 0,
+    "by_model": {
+      "gpt-4o-mini": {
+        "prompt_tokens": 12339,
+        "completion_tokens": 837,
+        "calls": 16
+      }
+    }
+  }
+}

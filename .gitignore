@@ -1,0 +1,50 @@
+# .gitignore — Enterprise RAG Project
+
+# Environment variables (NEVER commit)
+.env
+*.env.local
+
+# Node.js
+node_modules/
+api/dist/
+api/coverage/
+frontend/dist/
+frontend/node_modules/
+*.log
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+rag_engine/.venv/
+rag_engine/__pycache__/
+*.pyc
+
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Qdrant local storage (if running without Docker)
+qdrant_storage/
+
+# Test outputs
+coverage/
+.pytest_cache/
+jest-results/
+
+# OCR / eval caches
+rag_engine/.cache/
+rag_engine/evaluation/cache/
+
+# Tài liệu thử nghiệm (bản quyền / dung lượng lớn) — chỉ giữ file mẫu nhỏ
+test_docs/*.pdf

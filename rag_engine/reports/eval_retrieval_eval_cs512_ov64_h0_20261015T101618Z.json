@@ -1,0 +1,118 @@
+{
+  "chunk": {
+    "chunk_size": 512,
+    "chunk_overlap": 64,
+    "context_header": false
+  },
+  "rewrite": false,
+  "rows": [
+    {
+      "config": "k10_n3_s0.1",
+      "top_k": 10,
+      "top_n": 3,
+      "min_score": 0.1,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "avg_chunks": 1.0,
+      "avg_context_tokens": 89.7,
+      "unanswerable_empty_rate": 1.0
+    },
+    {
+      "config": "k10_n5_s0.1",
+      "top_k": 10,
+      "top_n": 5,
+      "min_score": 0.1,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "avg_chunks": 1.0,
+      "avg_context_tokens": 89.7,
+      "unanswerable_empty_rate": 1.0
+    },
+    {
+      "config": "k20_n3_s0.1",
+      "top_k": 20,
+      "top_n": 3,
+      "min_score": 0.1,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "avg_chunks": 1.0,
+      "avg_context_tokens": 89.7,
+      "unanswerable_empty_rate": 1.0
+    },
+    {
+      "config": "k20_n5_s0.1",
+      "top_k": 20,
+      "top_n": 5,
+      "min_score": 0.1,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "avg_chunks": 1.0,
+      "avg_context_tokens": 89.7,
+      "unanswerable_empty_rate": 1.0
+    },
+    {
+      "config": "k10_n3_s0",
+      "top_k": 10,
+      "top_n": 3,
+      "min_score": 0.0,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "avg_chunks": 3.0,
+      "avg_context_tokens": 216.1,
+      "unanswerable_empty_rate": 0.0
+    },
+    {
+      "config": "k20_n3_s0",
+      "top_k": 20,
+      "top_n": 3,
+      "min_score": 0.0,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "avg_chunks": 3.0,
+      "avg_context_tokens": 216.1,
+      "unanswerable_empty_rate": 0.0
+    },
+    {
+      "config": "k10_n5_s0",
+      "top_k": 10,
+      "top_n": 5,
+      "min_score": 0.0,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "avg_chunks": 5.0,
+      "avg_context_tokens": 289.3,
+      "unanswerable_empty_rate": 0.0
+    },
+    {
+      "config": "k20_n5_s0",
+      "top_k": 20,
+      "top_n": 5,
+      "min_score": 0.0,
+      "hit": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0,
+      "avg_chunks": 5.0,
+      "avg_context_tokens": 289.3,
+      "unanswerable_empty_rate": 0.0
+    }
+  ],
+  "cost": {
+    "estimated_usd": 0.0,
+    "budget_usd": 0.2,
+    "cohere_rerank_calls": 8,
+    "by_model": {
+      "text-embedding-3-small": {
+        "prompt_tokens": 109,
+        "completion_tokens": 0,
+        "calls": 8
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>API Gateway Specification</title>
+</head>
+<body>
+  <nav><a href="#home">Home</a> | <a href="#docs">Docs</a></nav>
+  <main>
+    <h1>API Gateway Architecture</h1>
+    <p>The Fastify API Gateway serves as the single entry point for all frontend and external service requests.</p>
+    <section>
+      <h2>Deduplication Engine</h2>
+      <p>Before forwarding files to the ML service, the gateway generates a SHA-256 fingerprint of the binary stream. MongoDB is queried to detect existing documents.</p>
+    </section>
+  </main>
+  <footer>Copyright 2026 Enterprise AI Corp</footer>
+</body>
+</html>

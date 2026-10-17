@@ -1,0 +1,140 @@
+# docker-compose.yml — Enterprise RAG System
+# Services: frontend (React/Nginx) | api (Node.js Fastify) | rag_engine (Python FastAPI)
+#           | mongodb (Metadata Store) | qdrant (Vector DB / HNSW)
+# Ref: ARCHITECTURE.md §1 Executive Overview, §5 Technology Stack
+
+networks:
+  rag_network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
+  qdrant_data:
+
+services:
+
+  # ──────────────────────────────────────────────────────
+  # 1. MongoDB 7.0 — Document Metadata Store
+  #    Lưu: documents, document_chunks metadata, query_logs
+  #    Schema: ARCHITECTURE.md §4
+  # ──────────────────────────────────────────────────────
+  mongodb:
+    image: mongo:7.0
+    container_name: rag_mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER:-rag_user}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD:-rag_secret}
+      MONGO_INITDB_DATABASE: ${MONGO_DB:-rag_db}
+    volumes:
+      - mongodb_data:/data/db
+      - ./db/mongo_init:/docker-entrypoint-initdb.d:ro
+    networks:
+      - rag_network
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ──────────────────────────────────────────────────────
+  # 2. Qdrant v1.9.3 — Vector Database (HNSW Index)
+  #    Lưu: chunk embeddings (1536 dims, Cosine similarity)
+  #    HNSW Config: M=16, efConstruction=64 (§3.1)
+  # ──────────────────────────────────────────────────────
+  qdrant:
+    image: qdrant/qdrant:v1.9.3
+    container_name: rag_qdrant
+    restart: unless-stopped
+    ports:
+      - "6333:6333"   # REST API
+      - "6334:6334"   # gRPC
+    volumes:
+      - qdrant_data:/qdrant/storage
+    networks:
+      - rag_network
+    healthcheck:
+      # Image qdrant không có curl/wget → kiểm tra cổng REST bằng bash /dev/tcp
+      test: ["CMD", "bash", "-c", "echo > /dev/tcp/127.0.0.1/6333"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  # ──────────────────────────────────────────────────────
+  # 3. Python RAG Engine (FastAPI + Uvicorn)
+  #    Xử lý: parsing, chunking, embedding,
+  #            HNSW search, reranking, LLM generation
+  #    Internal port: 8000 (chỉ api service gọi vào)
+  # ──────────────────────────────────────────────────────
+  rag_engine:
+    build:
+      context: ./rag_engine
+      dockerfile: Dockerfile
+    container_name: rag_engine
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      MONGO_URI: mongodb://${MONGO_USER:-rag_user}:${MONGO_PASSWORD:-rag_secret}@mongodb:27017/${MONGO_DB:-rag_db}?authSource=admin
+      QDRANT_HOST: qdrant
+      QDRANT_PORT: 6333
+      QDRANT_GRPC_PORT: 6334
+      SAGEMAKER_SUPPRESS_V2_WARNING: "1"  # noisy warning from the cohere SDK's optional sagemaker import
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      COHERE_API_KEY: ${COHERE_API_KEY}
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    networks:
+      - rag_network
+
+  # ──────────────────────────────────────────────────────
+  # 4. Node.js API Gateway (Fastify)
+  #    Endpoints: POST /api/v1/query, /stream, /documents
+  #    Gọi Python rag_engine qua HTTP nội bộ
+  # ──────────────────────────────────────────────────────
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: rag_api
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      MONGO_URI: mongodb://${MONGO_USER:-rag_user}:${MONGO_PASSWORD:-rag_secret}@mongodb:27017/${MONGO_DB:-rag_db}?authSource=admin
+      RAG_ENGINE_URL: http://rag_engine:8000
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      rag_engine:
+        condition: service_started
+    networks:
+      - rag_network
+
+  # ──────────────────────────────────────────────────────
+  # 5. React Frontend (Vite → Nginx)
+  #    Giao diện người dùng — proxy /api -> Node.js
+  # ──────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: rag_frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    networks:
+      - rag_network

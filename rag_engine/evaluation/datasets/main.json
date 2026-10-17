@@ -1,0 +1,659 @@
+{
+  "source_collection": "eval_cs512_ov64_h0",
+  "seed": 7,
+  "items": [
+    {
+      "type": "factual",
+      "question": "What techniques are used for human-scale brain imaging?",
+      "history": [],
+      "reference_answer": "Human-scale brain imaging uses techniques like functional magnetic resonance imaging (fMRI) and magnetoencephalography (MEG).",
+      "evidence": "Human-scale brain imaging at non-single-neuron resolution leverages techniques like functional magnetic resonance imaging (fMRI) and magnetoencephalography (MEG)",
+      "document": "Human_Brain.pdf",
+      "language": "en",
+      "id": "q001"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Which methods are employed for imaging the human brain at a larger scale?",
+      "history": [],
+      "reference_answer": "The methods employed for larger scale human brain imaging include functional magnetic resonance imaging (fMRI) and magnetoencephalography (MEG).",
+      "evidence": "Human-scale brain imaging at non-single-neuron resolution leverages techniques like functional magnetic resonance imaging (fMRI) and magnetoencephalography (MEG)",
+      "document": "Human_Brain.pdf",
+      "language": "en",
+      "id": "q002"
+    },
+    {
+      "type": "factual",
+      "question": "Ai đã gặp Chủ tịch Hồ Chí Minh vào năm 1923?",
+      "history": [],
+      "reference_answer": "Nhà báo Ô-xíp Man-den-xtam đã gặp Chủ tịch Hồ Chí Minh vào năm 1923.",
+      "evidence": "Năm 1923, nhà báo Ô-xíp Man-den-xtam gặp Chủ tịch Hồ Chí Minh (lúc đó là Nguyễn Ái Quốc).",
+      "document": "Lịch sử 12.pdf",
+      "language": "vi",
+      "id": "q003"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Người nào đã viết bài về Nguyễn Ái Quốc trong tạp chí Ngọn lửa nhỏ?",
+      "history": [],
+      "reference_answer": "Bài viết về Nguyễn Ái Quốc trong tạp chí Ngọn lửa nhỏ được viết bởi nhà báo Ô-xíp Man-den-xtam.",
+      "evidence": "Ông viết bài Tham một chiến sĩ cộng sản quốc tế đăng trên tạp chí Ngọn lửa nhỏ.",
+      "document": "Lịch sử 12.pdf",
+      "language": "vi",
+      "id": "q004"
+    },
+    {
+      "type": "factual",
+      "question": "Diên cảm thấy như thế nào khi thấy Mai khóc?",
+      "history": [],
+      "reference_answer": "Diên cảm thấy cảm động và cúi xuống để an ủi người yêu.",
+      "evidence": "Cảm động, Diên cúi xuống để an ủi người yêu",
+      "document": "Truyện ngắn.pdf",
+      "language": "vi",
+      "id": "q005"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Cảm xúc của Diên khi thấy Mai khóc là gì?",
+      "history": [],
+      "reference_answer": "Diên cảm thấy xúc động và muốn an ủi Mai.",
+      "evidence": "Cảm động, Diên cúi xuống để an ủi người yêu",
+      "document": "Truyện ngắn.pdf",
+      "language": "vi",
+      "id": "q006"
+    },
+    {
+      "type": "factual",
+      "question": "Ai là người đọc sổ điền cho các ông kia?",
+      "history": [],
+      "reference_answer": "Thư ký là người đọc sổ điền cho các ông kia.",
+      "evidence": "Ông đọc cho các ông kia tính, xem rằng chủ nào bao nhiêu...",
+      "document": "Tắt đèn.pdf",
+      "language": "vi",
+      "id": "q007"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Ai đã được giao nhiệm vụ đọc sổ điền?",
+      "history": [],
+      "reference_answer": "Nhiệm vụ đọc sổ điền được giao cho thư ký.",
+      "evidence": "Ông đọc cho các ông kia tính, xem rằng chủ nào bao nhiêu...",
+      "document": "Tắt đèn.pdf",
+      "language": "vi",
+      "id": "q008"
+    },
+    {
+      "type": "factual",
+      "question": "C. Mác đã thể hiện sự chuyển biến nào trong tác phẩm “Góp phần phê phán triết học pháp quyền của Hegel – Lời nói đầu”?",
+      "history": [],
+      "reference_answer": "C. Mác đã thể hiện rõ sự chuyển biến từ thế giới quan duy tâm sang thế giới quan duy vật, và từ lập trường dân chủ cách mạng sang lập trường cộng sản chủ nghĩa.",
+      "evidence": "C. Mác, từ cuối năm 1843 đến tháng 4 năm 1844, thông qua tác phẩm “Góp phần phê phán triết học pháp quyền của Hegel – Lời nói đầu”, ông đã thể hiện rõ sự chuyển biến từ thế giới quan duy tâm sang thế giới quan duy vật, và từ lập trường dân chủ cách mạng sang lập trường cộng sản chủ nghĩa.",
+      "document": "decuongcnxhkh.pdf",
+      "language": "vi",
+      "id": "q009"
+    },
+    {
+      "type": "paraphrase",
+      "question": "C. Mác đã chuyển từ quan điểm nào sang quan điểm nào trong tác phẩm phê phán triết học của Hegel?",
+      "history": [],
+      "reference_answer": "C. Mác đã chuyển từ quan điểm duy tâm sang quan điểm duy vật, và từ lập trường dân chủ cách mạng sang lập trường cộng sản chủ nghĩa.",
+      "evidence": "C. Mác, từ cuối năm 1843 đến tháng 4 năm 1844, thông qua tác phẩm “Góp phần phê phán triết học pháp quyền của Hegel – Lời nói đầu”, ông đã thể hiện rõ sự chuyển biến từ thế giới quan duy tâm sang thế giới quan duy vật, và từ lập trường dân chủ cách mạng sang lập trường cộng sản chủ nghĩa.",
+      "document": "decuongcnxhkh.pdf",
+      "language": "vi",
+      "id": "q010"
+    },
+    {
+      "type": "factual",
+      "question": "What is the name of the successor to OpenWorm?",
+      "history": [],
+      "reference_answer": "The successor to OpenWorm is called BAAIWorm.",
+      "evidence": "A recent successor to OpenWorm called BAAIWorm has emerged",
+      "document": "Human_Brain.pdf",
+      "language": "en",
+      "id": "q011"
+    },
+    {
+      "type": "paraphrase",
+      "question": "What is the name of the new model that follows OpenWorm?",
+      "history": [],
+      "reference_answer": "The new model that follows OpenWorm is named BAAIWorm.",
+      "evidence": "A recent successor to OpenWorm called BAAIWorm has emerged",
+      "document": "Human_Brain.pdf",
+      "language": "en",
+      "id": "q012"
+    },
+    {
+      "type": "factual",
+      "question": "UNESCO có vai trò gì trong việc phát triển văn hóa và xã hội?",
+      "history": [],
+      "reference_answer": "UNESCO có vai trò quan trọng trong việc đẩy dối thoại, hợp tác giữa các dân tộc nhằm mục tiêu toàn cầu về phát triển văn hóa, xã hội, khoa học, phát triển bền vững.",
+      "evidence": "UNESCO có vai trò quan trọng trong việc đẩy dối thoại, hợp tác giữa các dân tộc nhằm mục tiêu toàn cầu về phát triển văn hóa, xã hội, khoa học, phát triển bền vững.",
+      "document": "Lịch sử 12.pdf",
+      "language": "vi",
+      "id": "q013"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Vai trò của UNESCO trong việc bảo tồn di sản văn hóa là gì?",
+      "history": [],
+      "reference_answer": "Ủy ban Di sản thế giới của UNESCO đã công nhận và hỗ trợ tài chính, góp phần quan trọng trong việc bảo tồn di sản văn hóa của nhân loại.",
+      "evidence": "Ủy ban Di sản thế giới của UNESCO đã công nhận và hỗ trợ tài chính, góp phần quan trọng trong việc bảo tồn di sản văn hóa của nhân loại.",
+      "document": "Lịch sử 12.pdf",
+      "language": "vi",
+      "id": "q014"
+    },
+    {
+      "type": "factual",
+      "question": "Bà cụ đã làm gì với những cây đàn của Tiến?",
+      "history": [],
+      "reference_answer": "Bà cụ đã đem bán rẻ cho mọi người trong huyện.",
+      "evidence": "Những cây đàn của Tiến lâu ngày đểmốc, bà cụđem bán rẻ cho mọi người trong huyện.",
+      "document": "Truyện ngắn.pdf",
+      "language": "vi",
+      "id": "q015"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Bà cụ đã xử lý như thế nào với những cây đàn cũ của Tiến?",
+      "history": [],
+      "reference_answer": "Bà cụ đã bán những cây đàn cũ của Tiến với giá rẻ cho người dân trong huyện.",
+      "evidence": "Những cây đàn của Tiến lâu ngày đểmốc, bà cụđem bán rẻ cho mọi người trong huyện.",
+      "document": "Truyện ngắn.pdf",
+      "language": "vi",
+      "id": "q016"
+    },
+    {
+      "type": "factual",
+      "question": "Cai lệ đã đưa cho chị Dậu những gì?",
+      "history": [],
+      "reference_answer": "Cai lệ đã đưa cho chị Dậu một bộ đủ áo the thâm, khăn vuông thâm, khăn vấn xa tanh, yếm trắng giải lụa bạch, dây lưng nhiễu xanh, áo cánh lụa trắng và một cái quần lụa thâm cặp màu cánh sen.",
+      "evidence": "Hắn lật đật mở rương, lấy ra một bộ đủ áo the thâm, khăn vuông thâm, khăn vấn xa tanh, yếm trắng giải lụa bạch, dây lưng nhiễu xanh, áo cánh lụa trắng và một cái quần lụa thâm cặp màu cánh sen.",
+      "document": "Tắt đèn.pdf",
+      "language": "vi",
+      "id": "q017"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Những món đồ nào đã được Cai lệ đưa cho chị Dậu?",
+      "history": [],
+      "reference_answer": "Cai lệ đã đưa cho chị Dậu một bộ trang phục gồm áo the thâm, khăn vuông, khăn vấn, yếm trắng, dây lưng, áo cánh và quần lụa cặp màu cánh sen.",
+      "evidence": "Hắn lật đật mở rương, lấy ra một bộ đủ áo the thâm, khăn vuông thâm, khăn vấn xa tanh, yếm trắng giải lụa bạch, dây lưng nhiễu xanh, áo cánh lụa trắng và một cái quần lụa thâm cặp màu cánh sen.",
+      "document": "Tắt đèn.pdf",
+      "language": "vi",
+      "id": "q018"
+    },
+    {
+      "type": "factual",
+      "question": "Who are the authors of the paper on cellular-resolution connectomics?",
+      "history": [],
+      "reference_answer": "The authors of the paper on cellular-resolution connectomics are M. Helmstaedter.",
+      "evidence": "Helmstaedter, M. (2013). Cellular-resolution connectomics: Challenges of dense neural circuit reconstruction.",
+      "document": "Human_Brain.pdf",
+      "language": "en",
+      "id": "q019"
+    },
+    {
+      "type": "paraphrase",
+      "question": "What is the title of the work by Helmstaedter?",
+      "history": [],
+      "reference_answer": "The title of the work by Helmstaedter is 'Cellular-resolution connectomics: Challenges of dense neural circuit reconstruction.'",
+      "evidence": "Cellular-resolution connectomics: Challenges of dense neural circuit reconstruction.",
+      "document": "Human_Brain.pdf",
+      "language": "en",
+      "id": "q020"
+    },
+    {
+      "type": "factual",
+      "question": "Nguyễn Ái Quốc đã viết thư kêu gọi điều gì sau hội nghị?",
+      "history": [],
+      "reference_answer": "Nguyễn Ái Quốc đã viết thư kêu gọi đoàn kết đánh đuổi Pháp - Nhật.",
+      "evidence": "Nguyễn Ái Quốc viết thư gửi đến đồng bào cả nước, kêu gọi đoàn kết đánh đuổi Pháp - Nhật.",
+      "document": "Lịch sử 12.pdf",
+      "language": "vi",
+      "id": "q021"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Nguyễn Ái Quốc đã kêu gọi điều gì trong thư gửi đến nhân dân cả nước?",
+      "history": [],
+      "reference_answer": "Trong thư gửi đến nhân dân cả nước, Nguyễn Ái Quốc kêu gọi sự đoàn kết để đánh đuổi thực dân Pháp và quân Nhật.",
+      "evidence": "Nguyễn Ái Quốc viết thư gửi đến đồng bào cả nước, kêu gọi đoàn kết đánh đuổi Pháp - Nhật.",
+      "document": "Lịch sử 12.pdf",
+      "language": "vi",
+      "id": "q022"
+    },
+    {
+      "type": "factual",
+      "question": "Ai đã đón Tâm khi nàng về thăm ông Tú?",
+      "history": [],
+      "reference_answer": "Bà Tú đã âu yếm đón hỏi Tâm trên thềm.",
+      "evidence": "Khi nghe thấy tiếng bà Tú âu yếm đón hỏi trên thềm",
+      "document": "Truyện ngắn.pdf",
+      "language": "vi",
+      "id": "q023"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Cảm xúc của Tâm khi trở về nhà là gì?",
+      "history": [],
+      "reference_answer": "Lòng Tâm dịu lại như ngày nàng còn gánh hàng về.",
+      "evidence": "lòng Tâm dịu lại như ngày nàng còn gánh hàng về",
+      "document": "Truyện ngắn.pdf",
+      "language": "vi",
+      "id": "q024"
+    },
+    {
+      "type": "factual",
+      "question": "Chị Dậu đã làm gì khi thấy Cái Tỉu khóc?",
+      "history": [],
+      "reference_answer": "Chị Dậu se sẽ đứng lên toan và ru con bé ấy.",
+      "evidence": "Chị Dậu se sẽ đứng lên toan và ru con bé ấy.",
+      "document": "Tắt đèn.pdf",
+      "language": "vi",
+      "id": "q025"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Khi Cái Tỉu khóc, phản ứng của chị Dậu là gì?",
+      "history": [],
+      "reference_answer": "Chị Dậu đã định đứng dậy và dỗ dành Cái Tỉu.",
+      "evidence": "Chị Dậu se sẽ đứng lên toan và ru con bé ấy.",
+      "document": "Tắt đèn.pdf",
+      "language": "vi",
+      "id": "q026"
+    },
+    {
+      "type": "factual",
+      "question": "Tôn giáo được xem là gì về bản chất?",
+      "history": [],
+      "reference_answer": "Tôn giáo là một hiện tượng xã hội tiêu cực.",
+      "evidence": "Xét về bản chất tôn giáo là một hiện tượng xã hội tiêu cực",
+      "document": "decuongcnxhkh.pdf",
+      "language": "vi",
+      "id": "q027"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Tôn giáo có thể được coi là một hiện tượng xã hội như thế nào?",
+      "history": [],
+      "reference_answer": "Tôn giáo được coi là một hiện tượng xã hội tiêu cực.",
+      "evidence": "Xét về bản chất tôn giáo là một hiện tượng xã hội tiêu cực",
+      "document": "decuongcnxhkh.pdf",
+      "language": "vi",
+      "id": "q028"
+    },
+    {
+      "type": "factual",
+      "question": "Who conducted a light-microscopy-based connectomic reconstruction of mammalian brain tissue?",
+      "history": [],
+      "reference_answer": "The study was conducted by Tavakoli, M. R., Lyudchik, J., Januszewski, M., Vistunou, V., Agudelo Duenas, N., and Danzl, J. G.",
+      "evidence": "Tavakoli, M. R., Lyudchik, J., Januszewski, M., Vistunou, V., Agudelo Duenas, N., ... & Danzl, J. G. (2024). Light-microscopy-based connectomic reconstruction of mammalian brain tissue.",
+      "document": "Human_Brain.pdf",
+      "language": "en",
+      "id": "q029"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Which authors worked on the connectomic reconstruction of mammalian brain tissue using light microscopy?",
+      "history": [],
+      "reference_answer": "The authors of the study are Tavakoli, M. R., Lyudchik, J., Januszewski, M., Vistunou, V., Agudelo Duenas, N., and Danzl, J. G.",
+      "evidence": "Tavakoli, M. R., Lyudchik, J., Januszewski, M., Vistunou, V., Agudelo Duenas, N., ... & Danzl, J. G. (2024). Light-microscopy-based connectomic reconstruction of mammalian brain tissue.",
+      "document": "Human_Brain.pdf",
+      "language": "en",
+      "id": "q030"
+    },
+    {
+      "type": "factual",
+      "question": "Mục tiêu xây dựng Cộng đồng ASEAN là gì?",
+      "history": [],
+      "reference_answer": "Mục tiêu xây dựng Cộng đồng ASEAN là đưa ASEAN trở thành một cộng đồng với ba trụ cột có mức độ liên kết sâu rộng hơn, ràng buộc hơn trên cơ sở pháp lý là Hiến chương ASEAN.",
+      "evidence": "Mục tiêu xây dựng Cộng đồng ASEAN là đưa ASEAN trở thành một cộng đồng với ba trụ cột có mức độ liên kết sâu rộng hơn, ràng buộc hơn trên cơ sở pháp lý là Hiến chương ASEAN.",
+      "document": "Lịch sử 12.pdf",
+      "language": "vi",
+      "id": "q031"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Cộng đồng ASEAN được xây dựng với những mục tiêu gì?",
+      "history": [],
+      "reference_answer": "Cộng đồng ASEAN được xây dựng với mục tiêu trở thành một cộng đồng có ba trụ cột với sự liên kết sâu sắc hơn và có cơ sở pháp lý từ Hiến chương ASEAN.",
+      "evidence": "Mục tiêu xây dựng Cộng đồng ASEAN là đưa ASEAN trở thành một cộng đồng với ba trụ cột có mức độ liên kết sâu rộng hơn, ràng buộc hơn trên cơ sở pháp lý là Hiến chương ASEAN.",
+      "document": "Lịch sử 12.pdf",
+      "language": "vi",
+      "id": "q032"
+    },
+    {
+      "type": "factual",
+      "question": "Tại sao người nuôi chó lại cho rằng nuôi chó có lợi hơn nuôi người giúp việc?",
+      "history": [],
+      "reference_answer": "Người nuôi chó cho rằng \"nuôi chó còn hơn là nuôi đứa ở\" vì chó có thể coi nhà.",
+      "evidence": "Nuôi chó còn hơn là nuôi đứa ở.",
+      "document": "Tắt đèn.pdf",
+      "language": "vi",
+      "id": "q033"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Người chủ nuôi chó nghĩ gì về việc nuôi chó so với nuôi người giúp việc?",
+      "history": [],
+      "reference_answer": "Người chủ cho rằng nuôi chó có lợi hơn vì chúng có thể giữ nhà.",
+      "evidence": "Nuôi chó còn hơn là nuôi đứa ở.",
+      "document": "Tắt đèn.pdf",
+      "language": "vi",
+      "id": "q034"
+    },
+    {
+      "type": "factual",
+      "question": "Chế độ nào đã bị phê phán trong đoạn văn?",
+      "history": [],
+      "reference_answer": "Chế độ quân chủ chuyên chế và chế độ TBCN đã bị phê phán.",
+      "evidence": "Đã thể hiện tinh thần phê phán, lên án chế độ quân chủ chuyên chế và chế độ TBCN đầy bất công",
+      "document": "decuongcnxhkh.pdf",
+      "language": "vi",
+      "id": "q035"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Đoạn văn đã chỉ ra những vấn đề gì về chế độ quân chủ và TBCN?",
+      "history": [],
+      "reference_answer": "Đoạn văn chỉ ra rằng chế độ quân chủ và TBCN đầy bất công, dẫn đến xung đột của cải và tội ác gia tăng.",
+      "evidence": "Đã thể hiện tinh thần phê phán, lên án chế độ quân chủ chuyên chế và chế độ TBCN đầy bất công, xung đột của cải khánh kiệt, đạo đức đảo lộn, tội ác gia tăng.",
+      "document": "decuongcnxhkh.pdf",
+      "language": "vi",
+      "id": "q036"
+    },
+    {
+      "type": "factual",
+      "question": "Who is the supervisor of the thesis committee?",
+      "history": [],
+      "reference_answer": "The supervisor of the thesis committee is Edward S. Boyden.",
+      "evidence": "Edward S. Boyden",
+      "document": "Human_Brain.pdf",
+      "language": "en",
+      "id": "q037"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Who holds the position of supervisor in the thesis committee?",
+      "history": [],
+      "reference_answer": "The position of supervisor in the thesis committee is held by Edward S. Boyden.",
+      "evidence": "Edward S. Boyden",
+      "document": "Human_Brain.pdf",
+      "language": "en",
+      "id": "q038"
+    },
+    {
+      "type": "factual",
+      "question": "Tỉ trọng ngành công nghiệp và dịch vụ trong cơ cấu GDP năm 2022 là bao nhiêu?",
+      "history": [],
+      "reference_answer": "Tỉ trọng ngành công nghiệp và dịch vụ trong cơ cấu GDP năm 2022 lần lượt là 38,26% và 41,33%.",
+      "evidence": "Tỉ trọng ngành công nghiệp và xây dựng, dịch vụ trong cơ cấu GDP năm 1986 lần lượt là 28,88% và 33,06%; đến năm 2022 đã tăng lên 38,26% và 41,33%.",
+      "document": "Lịch sử 12.pdf",
+      "language": "vi",
+      "id": "q039"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Năm 2022, tỷ lệ của ngành công nghiệp và dịch vụ trong GDP là gì?",
+      "history": [],
+      "reference_answer": "Năm 2022, tỷ lệ của ngành công nghiệp và dịch vụ trong GDP là 38,26% và 41,33% tương ứng.",
+      "evidence": "Tỉ trọng ngành công nghiệp và xây dựng, dịch vụ trong cơ cấu GDP năm 1986 lần lượt là 28,88% và 33,06%; đến năm 2022 đã tăng lên 38,26% và 41,33%.",
+      "document": "Lịch sử 12.pdf",
+      "language": "vi",
+      "id": "q040"
+    },
+    {
+      "type": "factual",
+      "question": "Bà cụ cảm thấy như thế nào khi nhận gói bạc?",
+      "history": [],
+      "reference_answer": "Bà cụ cảm thấy run run và rơm rớm nước mắt khi đỡ lấy gói bạc.",
+      "evidence": "Bà cụ run run đỡ lấy gói bạc, rơm rớm nước mắt.",
+      "document": "Truyện ngắn.pdf",
+      "language": "vi",
+      "id": "q041"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Cảm xúc của bà cụ khi nhận món quà là gì?",
+      "history": [],
+      "reference_answer": "Bà cụ cảm thấy xúc động và có nước mắt khi nhận gói bạc.",
+      "evidence": "Bà cụ run run đỡ lấy gói bạc, rơm rớm nước mắt.",
+      "document": "Truyện ngắn.pdf",
+      "language": "vi",
+      "id": "q042"
+    },
+    {
+      "type": "factual",
+      "question": "Tại sao anh Dậu chưa nộp thuế?",
+      "history": [],
+      "reference_answer": "Anh Dậu chưa nộp thuế vì anh đau yếu.",
+      "evidence": "Thưa ông, vì tôi đau yếu, nên chưa lo kịp, xin ông thư cho đến mai.",
+      "document": "Tắt đèn.pdf",
+      "language": "vi",
+      "id": "q043"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Lý do nào khiến anh Dậu chưa thực hiện việc nộp thuế?",
+      "history": [],
+      "reference_answer": "Lý do khiến anh Dậu chưa thực hiện việc nộp thuế là do anh đang bị bệnh.",
+      "evidence": "Thưa ông, vì tôi đau yếu, nên chưa lo kịp, xin ông thư cho đến mai.",
+      "document": "Tắt đèn.pdf",
+      "language": "vi",
+      "id": "q044"
+    },
+    {
+      "type": "followup",
+      "question": "And what specific technology is reviewed in one of the articles?",
+      "history": [
+        {
+          "role": "user",
+          "content": "What is the main topic of the passage?"
+        },
+        {
+          "role": "assistant",
+          "content": "The passage lists various research articles related to neuroscience and brain technology."
+        }
+      ],
+      "reference_answer": "Cranial window technology for optical access to the brain.",
+      "evidence": "A review of cranial window technology for optical access to the brain.",
+      "document": "Human_Brain.pdf",
+      "language": "en",
+      "id": "q045"
+    },
+    {
+      "type": "followup",
+      "question": "Vậy sự kiện nào diễn ra sau khi tiêu diệt căn cứ phòng thủ Xuân Lộc và Phan Rang?",
+      "history": [
+        {
+          "role": "user",
+          "content": "Mệnh lệnh của Đại tướng Võ Nguyên Giáp vào ngày 7-4-1975 có nội dung gì?"
+        },
+        {
+          "role": "assistant",
+          "content": "Mệnh lệnh yêu cầu các cánh quân phải thần tốc, táo bạo và tranh thủ từng giờ, từng phút để giải phóng miền Nam."
+        }
+      ],
+      "reference_answer": "Vào 5 giờ chiều ngày 26 – 4, năm cánh quân cùng lực lượng tại trung tâm thành phố, đánh chiếm các cơ quan đầu não của chính quyền Sài Gòn.",
+      "evidence": "5 giờ chiều ngày 26 – 4, năm cánh quân cùng lực lượng tại trung tâm thành phố, đánh chiếm các cơ quan đầu não của chính quyền Sài Gòn.",
+      "document": "Lịch sử 12.pdf",
+      "language": "vi",
+      "id": "q046"
+    },
+    {
+      "type": "followup",
+      "question": "Và họ đã làm gì dưới bóng đèn?",
+      "history": [
+        {
+          "role": "user",
+          "content": "Ai đã hái hoa sớm?"
+        },
+        {
+          "role": "assistant",
+          "content": "Anh con hái đấy ạ"
+        }
+      ],
+      "reference_answer": "chuyện trò dưới bóng đèn mãi tới khuya, khi trăng lên.",
+      "evidence": "chuyện trò dưới bóng đèn mãi tới khuya, khi trăng lên.",
+      "document": "Truyện ngắn.pdf",
+      "language": "vi",
+      "id": "q047"
+    },
+    {
+      "type": "followup",
+      "question": "Và ai là người đã mang thịt đến?",
+      "history": [
+        {
+          "role": "user",
+          "content": "Chuyện gì đang diễn ra trong đoạn văn này?"
+        },
+        {
+          "role": "assistant",
+          "content": "Mọi người đang bàn về giá thịt lợn và chuẩn bị cho bữa ăn."
+        }
+      ],
+      "reference_answer": "Thằng Mới là người đã mang thịt đến.",
+      "evidence": "Thằng Mới kĩu kịt trên vai chiếc đòn gánh treo hai chiếc quang.",
+      "document": "Tắt đèn.pdf",
+      "language": "vi",
+      "id": "q048"
+    },
+    {
+      "type": "followup",
+      "question": "Và điều kiện sống của họ ra sao?",
+      "history": [
+        {
+          "role": "user",
+          "content": "Địa vị xã hội của giai cấp công nhân trong xã hội TBCN là gì?"
+        },
+        {
+          "role": "assistant",
+          "content": "Là giai cấp bị bóc lột, có lợi ích cơ bản đối lập trực tiếp với giai cấp tư sản."
+        }
+      ],
+      "reference_answer": "Điều kiện sống đã tạo điều kiện cho họ có thể đoàn kết chặt chẽ với nhau trong cuộc đấu tranh giai cấp.",
+      "evidence": "điều kiện sống đã tạo điều kiện cho họ có thể đoàn kết chặt chẽ với nhau trong cuộc đấu tranh giai cấp",
+      "document": "decuongcnxhkh.pdf",
+      "language": "vi",
+      "id": "q049"
+    },
+    {
+      "type": "followup",
+      "question": "And what is one of the studies mentioned?",
+      "history": [
+        {
+          "role": "user",
+          "content": "What is the main topic of the passage?"
+        },
+        {
+          "role": "assistant",
+          "content": "The passage discusses various research papers related to neural signal propagation, neuromorphic computing, and brain studies."
+        }
+      ],
+      "reference_answer": "One of the studies mentioned is about the neural signal propagation atlas of Caenorhabditis elegans.",
+      "evidence": "Neural signal propagation atlas of Caenorhabditis elegans.",
+      "document": "Human_Brain.pdf",
+      "language": "en",
+      "id": "q050"
+    },
+    {
+      "type": "followup",
+      "question": "Vậy trật tự thế giới hai cực I-an-ta đã hình thành và tồn tại như thế nào?",
+      "history": [
+        {
+          "role": "user",
+          "content": "Sự sụp đổ của Trật tự thế giới hai cực I-an-ta đã dẫn đến điều gì?"
+        },
+        {
+          "role": "assistant",
+          "content": "Sự kết thúc Chiến tranh lạnh và sự hình thành một trật tự thế giới mới."
+        }
+      ],
+      "reference_answer": "Quá trình hình thành và tồn tại của Trật tự thế giới hai cực I-an-ta.",
+      "evidence": "Hãy tóm tắt những nét chính về quá trình hình thành và tồn tại của Trật tự thế giới hai cực I-an-ta.",
+      "document": "Lịch sử 12.pdf",
+      "language": "vi",
+      "id": "q051"
+    },
+    {
+      "type": "unanswerable",
+      "question": "Hồ Chí Minh đã ký kết bao nhiêu hiệp định ngoại giao trong năm 1950?",
+      "history": [],
+      "reference_answer": "",
+      "evidence": "",
+      "document": null,
+      "language": "vi",
+      "id": "q052"
+    },
+    {
+      "type": "unanswerable",
+      "question": "What is the exact number of synapses in a human brain according to recent studies?",
+      "history": [],
+      "reference_answer": "",
+      "evidence": "",
+      "document": null,
+      "language": "en",
+      "id": "q053"
+    },
+    {
+      "type": "unanswerable",
+      "question": "Chị Dậu đã sống bao nhiêu năm trong cảnh nghèo khổ trước khi được cứu giúp?",
+      "history": [],
+      "reference_answer": "",
+      "evidence": "",
+      "document": null,
+      "language": "vi",
+      "id": "q054"
+    },
+    {
+      "type": "unanswerable",
+      "question": "What was the specific date when the first brain surgery was performed successfully?",
+      "history": [],
+      "reference_answer": "",
+      "evidence": "",
+      "document": null,
+      "language": "en",
+      "id": "q055"
+    },
+    {
+      "type": "unanswerable",
+      "question": "Số lượng người tham gia cuộc cách mạng tháng Tám năm 1945 là bao nhiêu?",
+      "history": [],
+      "reference_answer": "",
+      "evidence": "",
+      "document": null,
+      "language": "vi",
+      "id": "q056"
+    },
+    {
+      "type": "unanswerable",
+      "question": "How many types of neural circuits are identified in zebrafish compared to humans?",
+      "history": [],
+      "reference_answer": "",
+      "evidence": "",
+      "document": null,
+      "language": "en",
+      "id": "q057"
+    },
+    {
+      "type": "unanswerable",
+      "question": "Chị Dậu đã nhận được bao nhiêu đồng tiền trợ cấp từ chính phủ trong năm 1946?",
+      "history": [],
+      "reference_answer": "",
+      "evidence": "",
+      "document": null,
+      "language": "vi",
+      "id": "q058"
+    },
+    {
+      "type": "unanswerable",
+      "question": "What is the name of the protein that regulates mood in the human brain, and how many variants exist?",
+      "history": [],
+      "reference_answer": "",
+      "evidence": "",
+      "document": null,
+      "language": "en",
+      "id": "q059"
+    }
+  ]
+}

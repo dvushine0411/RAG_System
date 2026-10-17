@@ -1,0 +1,95 @@
+{
+  "source_collection": "eval_cs512_ov64_h0",
+  "seed": 7,
+  "items": [
+    {
+      "type": "factual",
+      "question": "What serves as the single entry point for all frontend and external service requests?",
+      "history": [],
+      "reference_answer": "The Fastify API Gateway serves as the single entry point for all frontend and external service requests.",
+      "evidence": "The Fastify API Gateway serves as the single entry point for all frontend and external service requests.",
+      "document": "sample.html",
+      "language": "en",
+      "id": "q001"
+    },
+    {
+      "type": "paraphrase",
+      "question": "Which component acts as the main access point for requests from the frontend and external services?",
+      "history": [],
+      "reference_answer": "The Fastify API Gateway acts as the main access point for requests from the frontend and external services.",
+      "evidence": "The Fastify API Gateway serves as the single entry point for all frontend and external service requests.",
+      "document": "sample.html",
+      "language": "en",
+      "id": "q002"
+    },
+    {
+      "type": "factual",
+      "question": "What is the chunk size used in the chunking strategy?",
+      "history": [],
+      "reference_answer": "The chunk size used in the chunking strategy is 512 tokens.",
+      "evidence": "Chunk Size | 512 tokens | Ideal target for embedding models",
+      "document": "sample.md",
+      "language": "en",
+      "id": "q003"
+    },
+    {
+      "type": "paraphrase",
+      "question": "How many tokens are included in each segment created by the recursive character splitting?",
+      "history": [],
+      "reference_answer": "Each segment created by the recursive character splitting contains 512 tokens.",
+      "evidence": "Recursive character splitting breaks large texts into segments of 512 tokens with 64-token overlap.",
+      "document": "sample.md",
+      "language": "en",
+      "id": "q004"
+    },
+    {
+      "type": "factual",
+      "question": "What must all engineering teams adhere to?",
+      "history": [],
+      "reference_answer": "All engineering teams must adhere to microservice isolation and zero unauthorized installations.",
+      "evidence": "All engineering teams must adhere to microservice isolation and zero unauthorized installations.",
+      "document": "sample.txt",
+      "language": "en",
+      "id": "q005"
+    },
+    {
+      "type": "paraphrase",
+      "question": "What is required for a pull request before it can be merged?",
+      "history": [],
+      "reference_answer": "Every pull request must pass the automated test suite before merging into the main branch.",
+      "evidence": "Every pull request must pass the automated test suite before merging into the main branch.",
+      "document": "sample.txt",
+      "language": "en",
+      "id": "q006"
+    },
+    {
+      "type": "followup",
+      "question": "And what does it do before forwarding files to the ML service?",
+      "history": [
+        {
+          "role": "user",
+          "content": "What is the main function of the Fastify API Gateway?"
+        },
+        {
+          "role": "assistant",
+          "content": "The Fastify API Gateway serves as the single entry point for all frontend and external service requests."
+        }
+      ],
+      "reference_answer": "The gateway generates a SHA-256 fingerprint of the binary stream.",
+      "evidence": "Before forwarding files to the ML service, the gateway generates a SHA-256 fingerprint of the binary stream.",
+      "document": "sample.html",
+      "language": "en",
+      "id": "q007"
+    },
+    {
+      "type": "unanswerable",
+      "question": "What is the exact number of tokens required for optimal performance in the ingestion pipeline?",
+      "history": [],
+      "reference_answer": "",
+      "evidence": "",
+      "document": null,
+      "language": "en",
+      "id": "q008"
+    }
+  ]
+}
